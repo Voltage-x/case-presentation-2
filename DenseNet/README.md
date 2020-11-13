@@ -9,7 +9,6 @@
 
 ### CODE
 - 2DNet
-- SequenceModel
 
 # 2D CNN Classifier
 
