@@ -7,9 +7,6 @@
 - torch==1.1.0
 - torchvision==0.2.1
 
-### CODE
-- 2DNet
-
 # 2D CNN Classifier
 
 Prepare csv file:
