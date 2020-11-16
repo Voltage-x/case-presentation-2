@@ -1,0 +1,16 @@
+addict
+albumentations
+apex
+logging
+pandas
+pretrainedmodels
+pydicom
+opencv-python==3.4.11.45
+scikit-learn
+torch==1.7.0+cu101 
+torchvision==0.8.1+cu101 
+torchaudio===0.7.0
+tqdm
+xgboost
+lightgbm
+catboost
