@@ -7,7 +7,7 @@
 ## Table of Contents
 
 *   [Directory Layout](#directory-layout)
-*   [Solution Overview](#solution-overview)
+*   [Solution Overview](#solution-overview-and-reference)
 *   [How to Run](#how-to-run)
     *   [Requirements](#requirements)
     *   [Preprocessing](#preprocessing)
@@ -15,9 +15,6 @@
     *   [Predicting](#predicting)
     *   [Second Level Model](#second-level-model-how-to-run)
     *   [Ensembling](#ensembling)
-*   [Download](#download)
-    *   [Trained Weights](#trained-weights)
-*   [License](#license)
 
 
 ## Directory layout
