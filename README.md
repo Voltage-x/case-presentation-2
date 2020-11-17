@@ -1,7 +1,7 @@
 # Digital Medicine
 ## Case presentation 2: RSNA ICH Detection
 
-- This is project is based on [RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection) - [appian42](https://github.com/appian42/kaggle-rsna-intracranial-hemorrhage) ended up at 11th place in Kaggle competition in 2019.
+- This project is based on [RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection) - [appian42](https://github.com/appian42/kaggle-rsna-intracranial-hemorrhage) ended up at 11th place in Kaggle competition in 2019.
 
 
 ## Table of Contents
@@ -27,14 +27,14 @@
 ├── bin               # Scripts to perform various tasks such as `preprocess`, `train`.
 ├── conf              # Configuration files for classification models.
 ├── model             # Where classification model outputs are saved.
-├── meta              # Where second level model outputs are saved.
+├── meta              # Where second-level model outputs are saved.
 ├── src               # Main source code
- └── preprocess       # Preprocess raw data into trainalbe image. 
+ └── preprocess       # Preprocess raw data into trainable image. 
 │      ├── preprocess 
 │      │      ├── CSV_Gernerator-Train.ipyb
 │      │      ├── CSV_Gernerator-Test.ipyb
 │      │      ├── Prediction.ipyb
-│      └──    └── stage_2_train.csv   # Dowload from kaggle.
+│      └──    └── stage_2_train.csv   # Download from Kaggle.
 ├── TotalData     # Training data provided in class. 
 └── TestingData   # Testing data provided in class. 
 ```
@@ -87,6 +87,18 @@ $ sh ./bin/train.sh
 
 - Trains two types of models `se_resnext50_32x4d` and `se_resnext101_32x4d`. 
 
+### Hyperparameters
+
+
+| Hyperparameter | value | 
+| -------- | -------- | 
+| Batch     | 28     | 
+| Loss function     | BCEWithLogitsLoss     | 
+| Optimizer     | Adam     | 
+| Learning rate     | 1e-4     | 
+| Lr_decay     | 0.4     | 
+| Epoch     | 4     | 
+
 
 ### Predicting (classification model)
 
@@ -94,7 +106,7 @@ run [CSV_Gernerator-Test.ipyb]() and
 run [Predict.ipyb]()
 
 - Makes predictions for test data.
-- Checkpoints 3rd epoch of each fold are used for predictions.
+- Checkpoints 3rd epoch of each fold is used for predictions.
 
 
 ### Second level model
@@ -103,8 +115,8 @@ run [Predict.ipyb]()
 $ sh ./bin/predict_meta.sh
 ~~~
 
-- Ensembles out-of-fold predictions from the previous step (used as meta features to construct train data).
-- Ensembles test predictions from the previous step (used as meta features to construct test data).
+- Ensembles out-of-fold predictions from the previous step (used as meta-features to construct train data).
+- Ensembles test predictions from the previous step (used as meta-features to construct test data).
 - Trains `LightGBM`, `Catboost` and `XGB` with 8 folds each.
 - Predicts on test data using each of the trained models.
 
