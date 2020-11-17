@@ -4,6 +4,10 @@
 - This project is based on [RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection) - [appian42](https://github.com/appian42/kaggle-rsna-intracranial-hemorrhage) ended up at 11th place in Kaggle competition in 2019.
 
 
+<p float="center">
+  <img src="./Window-classification/CM_trail2_CT_G06.png" width="50%" />   
+</p>
+
 ## Table of Contents
 
 *   [Directory Layout](#directory-layout)
@@ -13,7 +17,7 @@
     *   [Preprocessing](#preprocessing)
     *   [Training](#training)
     *   [Predicting](#predicting)
-    *   [Second Level Model](#second-level-model-how-to-run)
+    *   [Second Level Model](#second-level-model)
     *   [Ensembling](#ensembling)
 
 
@@ -47,9 +51,9 @@ Missing directories will be created when `./bin/preprocess.sh` is run.
 
 ## How to run
 
-Please download `/TotalData` & `/TestingData` directory from [Drive]() and put them in the root level and unzip.
+Please download `/TotalData` & `/TestingData` directory from [Drive](https://drive.google.com/drive/folders/1QP0CcygM4oeoY8pfVsBQcjQAI9pAmsAa?usp=sharing) and put them in the root level and unzip.
 
-Please download `stage_2_train.csv` from [Drive]() and put it in `./src/preprocess/`
+Please download `stage_2_train.csv` from [Drive](https://drive.google.com/drive/folders/1QP0CcygM4oeoY8pfVsBQcjQAI9pAmsAa?usp=sharing) and put it in `./src/preprocess/`
 
 Please make sure you run each of the scripts from parent directory of `./bin`.
 
@@ -76,7 +80,7 @@ run [CSV_Gernerator-Train.ipyb]()
 - [make_folds.py](./src/preprocess/make_folds.py) makes folds(n=1) for cross validation(option). 
 
 
-### Training (classification model)
+### Training
 
 ~~~
 $ sh ./bin/train.sh
@@ -97,7 +101,7 @@ $ sh ./bin/train.sh
 | Epoch     | 4     | 
 
 
-### Predicting (classification model)
+### Predicting
 
 run [CSV_Gernerator-Test.ipyb]() and 
 run [Predict.ipyb]()
@@ -118,7 +122,7 @@ $ sh ./bin/predict_meta.sh
 - Predicts on test data using each of the trained models.
 
 
-### Ensembling (+postprocessing)
+### Ensembling
 
 ~~~
 $ sh ./bin/ensemble.sh
