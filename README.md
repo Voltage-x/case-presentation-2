@@ -3,6 +3,15 @@
 
 - This project is based on [RSNA Intracranial Hemorrhage Detection](https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection) - [appian42](https://github.com/appian42/kaggle-rsna-intracranial-hemorrhage) ended up at 11th place in Kaggle competition in 2019.
 
+|           Model            | Accuracy | 
+| -------------------------- | -------- | 
+|  SE ResNeXt50_32x4d        |   77%    | 
+|  SE ResNeXt101_32x4d       |   78%    | 
+|  TResNet_XL-448 (20epochs) |   78%    | 
+|  ResNeXt50_32x4d (SWSL)    |   75%    | 
+|  EfficientNet-b4           |   72%    | 
+|  ViT Large patch 32        |   71%    |
+
 
 <p float="center">
   <img src="./Window-classification/CM_trail2_CT_G06.png" width="50%" />   
